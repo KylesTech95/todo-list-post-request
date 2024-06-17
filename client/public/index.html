@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style-type: none;
+    }
+
+    body {
+      background: silver;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #wrapper {
+      height: 400px;
+      width: 400px;
+      border:3px solid indigo;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #list-container,
+    #form-container {
+      height: 50%;
+      width: 50%;
+      border:3px solid green;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #list-container {
+      justify-content: center;
+    }
+    #form-container {
+      justify-content: start;
+    }
+    .list-container-actual {
+      height: 100%;
+      width: 100%;
+      border: 3px solid #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    span.del {
+      padding: 6px;
+      border-radius: 8px;
+      bordeR:2px solid red;
+      background: red;
+      color: #fff;
+    }
+    .list-item {
+      width: 100%;
+      border:2px solid black;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      background: violet;
+      color: #fff;
+    }
+    #form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border:2px solid red;
+    }
+    input#todo-input {
+      padding: 4px;
+      border-radius: 8px;
+      border: none;
+      text-align: center;
+    }
+    button {
+      padding: 4px;
+      border: none;
+      border-radius: 8px;
+      background: violet;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <!-- wrapper -->
+    <div id="wrapper">
+      <!-- parent -->
+      <div id="list-container" class="parent-container">
+        <!-- ul -->
+        <ul class="list-container-actual">
+          <!-- li -->
+          <li class="list-item">Workout <span class="del">X</span></li>
+          <li class="list-item">Play guitar <span class="del">X</span></li>
+          <li class="list-item">Eat dinner <span class="del">X</span></li>
+        </ul>
+      </div>
+
+      <!-- parent -->
+      <div id="form-container" class="parent-container">
+        <!-- form -->
+        <form action="/api/todo" method="POST" id="form">
+          <!-- label -->
+          <label for="todo">Todo</label>
+          <!-- input -->
+          <input type="text" name="todo" id="todo-input" />
+          <!-- button -->
+          <button type="submit">POST</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
