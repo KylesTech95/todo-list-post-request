@@ -26,7 +26,7 @@
     #wrapper {
       height: 400px;
       width: 400px;
-      border:3px solid indigo;
+      /* border:3px solid indigo; */
       border-radius: 8px;
       display: flex;
       flex-direction: column;
@@ -37,7 +37,7 @@
     #form-container {
       height: 50%;
       width: 50%;
-      border:3px solid green;
+      /* border:3px solid green; */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -60,13 +60,14 @@
     span.del {
       padding: 6px;
       border-radius: 8px;
-      bordeR:2px solid red;
+      /* bordeR:2px solid red; */
       background: red;
       color: #fff;
+      cursor: pointer;
     }
     .list-item {
       width: 100%;
-      border:2px solid black;
+      /* border:2px solid black; */
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -81,7 +82,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      border:2px solid red;
+      /* border:2px solid red; */
     }
     input#todo-input {
       padding: 4px;
@@ -105,14 +106,21 @@
         <!-- ul -->
         <ul class="list-container-actual">
           <!-- li -->
-          <li class="list-item">Workout <span class="del">X</span></li>
+          <!-- <li class="list-item">Workout <span class="del">X</span></li>
           <li class="list-item">Play guitar <span class="del">X</span></li>
-          <li class="list-item">Eat dinner <span class="del">X</span></li>
+          <li class="list-item">Eat dinner <span class="del">X</span></li> -->
         </ul>
       </div>
 
       <!-- parent -->
       <div id="form-container" class="parent-container">
+
+
+
+
+
+
+
         <!-- form -->
         <form action="/api/todo" method="POST" id="form">
           <!-- label -->
@@ -120,9 +128,10 @@
           <!-- input -->
           <input type="text" name="todo" id="todo-input" />
           <!-- button -->
-          <button type="submit">POST</button>
+          <button type="submit" id="btn">POST</button>
         </form>
       </div>
     </div>
   </body>
+  <script src="main.js"></script>
 </html>
